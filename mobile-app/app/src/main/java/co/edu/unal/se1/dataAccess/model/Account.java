@@ -3,31 +3,32 @@ package co.edu.unal.se1.dataAccess.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Database;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
 @Entity
-public class Cuenta implements Serializable  {
+public class Account implements Serializable{
 
-    public User user;
 
+    @ForeignKey(entity = User.class,parentColumns = "idUser", childColumns = "User id")
     @ColumnInfo(name = "User ID")
-    public int userid = this.user.id;
+    public int userid;
 
     @ColumnInfo(name = "Amount")
     public int Amount;
 
+    @ColumnInfo(name = "Accountid")
     @PrimaryKey
-    @ColumnInfo(name = "Cuentaid")
-    public int cuentaid;
+    public int accountid;
 
-    public int getCuentaId() {
-        return this.cuentaid;
+    public int getAccountId() {
+        return this.accountid;
     }
 
-    public void setCuentaId(int cuentaid) {
-        this.cuentaid = cuentaid;
+    public void setAccountId(int accountid) {
+        this.accountid = accountid;
     }
 
     public int getAmount() {
@@ -38,7 +39,7 @@ public class Cuenta implements Serializable  {
         this.Amount = Amount;
     }
 
-    public int getUserCuentaId() {
-        return this.user.id;
+    public int getUserAccountId() {
+        return this.userid;
     }
 }

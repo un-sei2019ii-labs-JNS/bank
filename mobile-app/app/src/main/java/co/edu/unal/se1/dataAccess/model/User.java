@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 @Entity
 public class User implements Serializable {
-
+    @ColumnInfo(name = "idUser")
     @PrimaryKey
     public int id;
 
@@ -19,8 +19,7 @@ public class User implements Serializable {
     public double balance;
 
     public int getId() {
-        return id;
-    }
+        return id;}
 
     public void setId(int id) {
         this.id = id;
