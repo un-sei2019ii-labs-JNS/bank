@@ -15,6 +15,5 @@ public abstract class Database extends RoomDatabase {
     public abstract UserDao userDao();
     public abstract TransactionDao TransactionDao();
     public abstract AccountDao accountDao();
-    public abstract ManagerDao managerDao();
 
 }
