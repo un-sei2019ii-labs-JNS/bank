@@ -12,10 +12,10 @@ import co.edu.unal.se1.dataAccess.model.Manager;
 @Dao
 public interface ManagerDao {
 
-    @Query("SELECT * FROM `transaction`")
+    @Query("SELECT * FROM `manager`")
     List<Manager> getAllManagers();
 
-    @Query("SELECT * FROM `Transaction` WHERE id = :id")
+    @Query("SELECT * FROM `Manager` WHERE id = :id")
     Manager getManagerById(int id);
 
     @Insert
