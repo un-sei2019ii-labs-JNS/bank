@@ -22,22 +22,5 @@ public class ManagerController {
         System.out.println("Created Manager");
     }
 
-    public void createUser(User user, Context context) {
 
-        userRepository = new UserRepository(context);
-        userRepository.createUser(user);
-        System.out.println("¡Usuario creado satisfactoriamente!");
-    }
-
-    public void updateUser(User user, Context context){
-
-    }
-
-    public void deleteUser(User user,Context context){
-
-    }
-
-    public void modifyInfoAboutUser(){
-
-    }
 }
