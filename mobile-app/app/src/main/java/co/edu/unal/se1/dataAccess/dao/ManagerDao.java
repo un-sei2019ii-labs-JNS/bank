@@ -7,3 +7,27 @@ import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
 
+<<<<<<< HEAD
+=======
+import co.edu.unal.se1.dataAccess.model.Manager;
+
+@Dao
+public interface ManagerDao {
+
+    @Query("SELECT * FROM `manager`")
+    List<Manager> getAllManagers();
+
+    @Query("SELECT * FROM `Manager` WHERE id = :id")
+    Manager getManagerById(int id);
+
+    @Insert
+    void createManager(Manager manager);
+
+    @Update
+    void updateManager(Manager manager);
+
+    @Delete
+    void deleteManager(Manager manager);
+
+}
+>>>>>>> 64b54287e5f864d0023ef9f129948fb4838cb271
