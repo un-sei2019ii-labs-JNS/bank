@@ -17,7 +17,7 @@ public class Account implements Serializable{
     public int userid;
 
     @ColumnInfo(name = "Amount")
-    public int Amount;
+    public double amount;
 
     @ColumnInfo(name = "Accountid")
     @PrimaryKey
@@ -31,12 +31,12 @@ public class Account implements Serializable{
         this.accountid = accountid;
     }
 
-    public int getAmount() {
-        return this.Amount;
+    public double getAmount() {
+        return this.amount;
     }
 
-    public void setAmount(int Amount) {
-        this.Amount = Amount;
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public int getUserAccountId() {

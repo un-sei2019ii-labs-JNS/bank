@@ -15,8 +15,10 @@ public class User implements Serializable {
     @ColumnInfo(name = "name")
     public String name;
 
-    @ColumnInfo(name = "balance")
-    public double balance;
+    @ColumnInfo(name = "email")
+    public String email;
+
+    public Account cuenta;
 
     public int getId() {
         return id;}
@@ -33,12 +35,20 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public double getBalance() {
-        return balance;
+    public String getEmail() {
+        return email;
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Account getAccount() {
+        return cuenta;
+    }
+
+    public void setAccount(Account account) {
+        this.cuenta = cuenta;
     }
 }
 

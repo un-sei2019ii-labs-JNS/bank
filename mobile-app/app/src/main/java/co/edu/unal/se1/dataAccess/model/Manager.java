@@ -12,10 +12,10 @@ public class Manager implements Serializable {
     @PrimaryKey
     public int id;
 
-    @ColumnInfo(nickname = "nickname")
+    @ColumnInfo(name = "nickname")
     public String nickname;
 
-    @ColumnInfo(nickname = "password")
+    @ColumnInfo(name = "password")
     public String password;
 
     public int getId() {

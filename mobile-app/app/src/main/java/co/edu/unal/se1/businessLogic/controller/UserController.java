@@ -27,29 +27,29 @@ public class UserController {
         final User sourceUser = userRepository.getUserById(sourceId);
         System.out.println("Source User - ID: " + sourceUser.getId() +
                 ", Name: " + sourceUser.getName() +
-                ", Balance: " + sourceUser.getBalance());
+                ", Email: " + sourceUser.getEmail()+", Balance: " + sourceUser.getAccount().getAmount());
 
-        if (sourceUser.getBalance() >= value) {
+        if (sourceUser.getAccount().amount >= value) {
 
             final User targetUser = userRepository.getUserById(targetId);
             System.out.println("Target User - ID: " + targetUser.getId() +
                     ", Name: " + targetUser.getName() +
-                    ", Balance: " + targetUser.getBalance());
+                    ", Email: " + targetUser.getEmail()+", Balance: " + targetUser.getAccount().getAmount());
 
-            sourceUser.setBalance(sourceUser.getBalance() - value);
-            targetUser.setBalance(targetUser.getBalance() + value);
+            sourceUser.getAccount().setAmount(sourceUser.getAccount().getAmount()- value);
+            targetUser.getAccount().setAmount(targetUser.getAccount().getAmount() + value);
             userRepository.updateUser(sourceUser);
             userRepository.updateUser(targetUser);
 
             final User updatedSourceUser = userRepository.getUserById(sourceId);
             System.out.println("Source User (updated) - ID: " + updatedSourceUser.getId() +
                     ", Name: " + updatedSourceUser.getName() +
-                    ", Balance: " + updatedSourceUser.getBalance());
+                    ", Email: " + updatedSourceUser.getEmail()+", Balance: " + updatedSourceUser.getAccount().getAmount());
 
             final User updatedTargetUser = userRepository.getUserById(targetId);
             System.out.println("Target User (updated) - ID: " + updatedTargetUser.getId() +
                     ", Name: " + updatedTargetUser.getName() +
-                    ", Balance: " + updatedTargetUser.getBalance());
+                    ", Email: " + updatedTargetUser.getEmail()+updatedTargetUser.getAccount().getAmount());
 
             return true;
 
@@ -59,4 +59,17 @@ public class UserController {
         }
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
