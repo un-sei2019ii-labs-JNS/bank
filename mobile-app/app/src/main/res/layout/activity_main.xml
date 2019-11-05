@@ -118,6 +118,14 @@
                                                                 android:layout_width="match_parent"
                                                                 android:layout_height="wrap_content"
                                                                 android:text="Enviar Dinero" />
+
+                                                            <Button
+                                                                android:id="@+id/createButton1"
+                                                                android:layout_width="410dp"
+                                                                android:layout_height="200px"
+
+                                                                android:text="Ingresar Como Administrador" />
+
                                                         </LinearLayout>
                                                     </com.google.android.material.textfield.TextInputLayout>
                                                 </LinearLayout>

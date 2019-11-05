@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.content.Intent;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -65,6 +66,16 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     System.out.println("¡Transacción no satisfactoria!");
                 }
+            }
+        });
+
+        Button createButton1 = findViewById(R.id.createButton1);
+        createButton1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+               Intent i = new Intent(MainActivity.this,Main2.class);
+               startActivity(i);
             }
         });
     }
