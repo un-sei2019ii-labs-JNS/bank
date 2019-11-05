@@ -6,6 +6,11 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 88f5de1001c821b8ee0caa535247f3c4f7f295e3
 import co.edu.unal.se1.dataAccess.model.Manager;
 
 @Dao
