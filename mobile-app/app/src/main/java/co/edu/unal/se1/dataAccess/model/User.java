@@ -3,6 +3,7 @@ package co.edu.unal.se1.dataAccess.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+import androidx.room.ForeignKey;
 
 import java.io.Serializable;
 
@@ -18,7 +19,9 @@ public class User implements Serializable {
     @ColumnInfo(name = "email")
     public String email;
 
-    public Account cuenta;
+    @ForeignKey(entity = Account.class,parentColumns = "Amount" , childColumns = "Balance")
+    @ColumnInfo(name = "Balance")
+    public double balance;
 
     public int getId() {
         return id;}
@@ -43,12 +46,12 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public Account getAccount() {
-        return cuenta;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setAccount(Account account) {
-        this.cuenta = cuenta;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
 
