@@ -7,8 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
 
-<<<<<<< HEAD
-=======
+
 import co.edu.unal.se1.dataAccess.model.Manager;
 
 @Dao
@@ -30,4 +29,4 @@ public interface ManagerDao {
     void deleteManager(Manager manager);
 
 }
->>>>>>> 64b54287e5f864d0023ef9f129948fb4838cb271
+
