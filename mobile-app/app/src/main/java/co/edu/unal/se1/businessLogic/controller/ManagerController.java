@@ -11,6 +11,10 @@ public class ManagerController {
     private ManagerRepository managerRepository;
     private UserRepository userRepository;
 
+    public ManagerRepository getManagerRepository() {
+        return managerRepository;
+    }
+
     public ManagerController() {
 
     }
@@ -19,7 +23,7 @@ public class ManagerController {
 
         managerRepository = new ManagerRepository(context);
         managerRepository.createManager(manager);
-        System.out.println("Created Manager");
+        System.out.println("Manager has been created");
     }
 
 

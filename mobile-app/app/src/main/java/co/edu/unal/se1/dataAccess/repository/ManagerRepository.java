@@ -33,6 +33,14 @@ public class ManagerRepository {
         database.ManagerDao().updateManager(manager);
     }
 
+    public String getDB_NAME() {
+        return DB_NAME;
+    }
+
+    public Database getDatabase() {
+        return database;
+    }
+
     public void deleteManager(int id) {
         Manager manager = database.ManagerDao().getManagerById(id);
         database.ManagerDao().deleteManager(manager);

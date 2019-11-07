@@ -12,7 +12,9 @@ import android.os.Build;
 
 import androidx.test.core.app.ApplicationProvider;
 
+import co.edu.unal.se1.businessLogic.controller.ManagerController;
 import co.edu.unal.se1.businessLogic.controller.UserController;
+import co.edu.unal.se1.dataAccess.model.Manager;
 import co.edu.unal.se1.dataAccess.model.User;
 
 
@@ -41,6 +43,22 @@ public class ExampleUnitTest {
         userController.createUser(user, context);
         // ...when the string is returned from the object under test...
         String result = userController.getUserRepository().getDB_NAME();
+
+        // ...then the result should be the expected one.
+        assertThat(result).isEqualTo(FAKE_STRING);
+    }
+
+    @Test
+    public void readStringFromUserRepository1() {
+        Manager manager = new Manager();
+        manager.setId(1);
+        manager.setNickname("Julito23");
+        manager.setPassword("notelavoyadecir");
+        // Given a Context object retrieved from Robolectric...
+        ManagerController managerController = new ManagerController();
+        managerController.createManager(manager, context);
+        // ...when the string is returned from the object under test...
+        String result = managerController.getManagerRepository().getDB_NAME();
 
         // ...then the result should be the expected one.
         assertThat(result).isEqualTo(FAKE_STRING);
