@@ -33,6 +33,14 @@ public class UserRepository {
         database.userDao().updateUser(user);
     }
 
+    public String getDB_NAME() {
+        return DB_NAME;
+    }
+
+    public Database getDatabase() {
+        return database;
+    }
+
     public void deleteUser(int id) {
         User user = database.userDao().getUserById(id);
         database.userDao().deleteUser(user);
